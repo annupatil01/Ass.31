@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 31</title>
+    <style>
+        body{
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            min-height: 100vh;
+        }
+        .app-title{
+            text-align: center;
+           color: black;
+            font-weight: bolder;
+            font-style: oblique;
+        }
+        #mainProductImage{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px  #6b666b;
+            margin: 20px auto;
+            display: block;
+        }
+        .product-Images-Container{
+            display: flex;
+            justify-content: center;
+        }
+        .product-image{
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border: 1px solid  #560464;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Product Preview Design</h1>
+    <h2 class="app-title">Product Name -Bluetooth Neckband </h2>
+    <img src="./img/1.png" id="mainProductImage"/>
+    <div class="product-Images-Container">
+        <img src="./img/1.png" class="product-image" onclick="changeImage('./img/1.png')"/>
+        <img src="./img/2.png" class="product-image" onclick="changeImage('./img/2.png')"/>
+        <img src="./img/3.png" class="product-image" onclick="changeImage('./img/3.png')"/>
+        <img src="./img/4.png" class="product-image" onclick="changeImage('./img/4.png')"/>
+        
+    </div>
+
+    <script>
+        function changeImage(imageName){
+            const mainImg = document.getElementById('mainProductImage');
+            mainImg.src = imageName;
+           
+        }
+    </script>
+</body>
+</html>
